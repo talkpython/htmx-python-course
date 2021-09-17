@@ -48,6 +48,6 @@ def setup_db():
 if __name__ == '__main__':
     configure()
     being_debugged = sys.gettrace() is not None
-    app.run()
+    app.run(debug=being_debugged)
 else:
     configure()
