@@ -5,7 +5,6 @@ import flask
 from services import video_service
 
 app = flask.Flask("app")
-app.config['SECRET_KEY'] = 'secret!'
 
 
 def configure():

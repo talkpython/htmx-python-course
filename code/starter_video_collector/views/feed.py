@@ -10,6 +10,6 @@ blueprint = flask.Blueprint('feed', __name__, template_folder='templates')
 @blueprint.get('/feed')
 @response(template_file='feed/index.html')
 def index():
-    time.sleep()
+    time.sleep(5)
     vm = FeedViewModel()
     return vm.to_dict()
