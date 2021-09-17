@@ -1,0 +1,14 @@
+{% for v in videos %}
+
+    {{ render_partial('feed/partials/partial_video_block.html', video=v) }}
+
+{% endfor %}
+
+{% if has_more_pages %}
+    <div class="scroll-trigger htmx-settling"
+         hx-get="/feed_partial/{{ (page+1) }}"
+         hx-trigger="revealed"
+         hx-swap="outerHTML">
+        <img class="htmx-indicator" width="150" src="/static/img/bars.svg"/>
+    </div>
+{% endif %}

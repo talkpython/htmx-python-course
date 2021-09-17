@@ -1,0 +1,46 @@
+{% extends "shared/_layout.html" %}
+{% block main_content %}
+
+    <div class="hero category-details"
+         style="background: url(/static/img/categories/{{ category.image }}) no-repeat center center; background-size: auto;background-size: cover;">
+        <div class="hero-inner">
+            <h1>{{ category.category }}</h1>
+        </div>
+
+    </div>
+
+    <div class="container videos category">
+        {% for row in rows %}
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                {% for v in row %}
+
+                    <div class="col-md-3 video">
+                        <div>
+                            <a href="/videos/play/{{ v.id }}"
+                            >
+
+
+                                <img src="https://img.youtube.com/vi/{{ v.id }}/maxresdefault.jpg"
+                                     class="img img-responsive {{ ' '.join(classes) }}"
+                                     alt="{{ v.title }}"
+                                     title="{{ v.title }}">
+
+
+                            </a>
+                            <a href="/videos/play/{{ v.id }}" class="author">{{ v.author }}</a>
+                            <div class="views">{{ "{:,}".format(v.views) }} views</div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
+
+{% block title %}{{ category.category }} Videos @ Video Collector{% endblock %}
