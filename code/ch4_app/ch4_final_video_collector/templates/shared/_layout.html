@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Video Collector - HTMX Demo App{% endblock %}</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic|Source+Code+Pro:500">
+
+    <link rel="stylesheet" href="/static/css/bootstrap-4-6-0.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/fontawesome-free/css/all.min.css"/>
+
+    <link rel="stylesheet" href="/static/css/site.css"/>
+    <link rel="stylesheet" href="/static/css/animations.css"/>
+
+    {% block additional_css %}{% endblock %}
+</head>
+<body>
+
+<nav class="navbar navbar-toggleable-md navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Video Collector <i class="fas fa-video"></i></a>
+
+    <button class="navbar-toggler navbar-toggle" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="navbar-toggler-icon">
+            <div class="nav-expand-line"></div>
+            <div class="nav-expand-line"></div>
+            <div class="nav-expand-line"></div>
+        </div>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="/feed"><i class="fas fa-list"></i></a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="main_content">
+    {% block main_content %}{% endblock %}
+</div>
+
+<footer>
+    <div class="copyright">
+        This is a demo site built during a course.<br>
+        It's a cool example of using <a href="https://htmx.org" target="_blank">HTMX</a><br>
+        <br>
+        Copyright &copy; <a href="https://training.talkpython.fm" target="_blank">Talk Python Training</a>.
+    </div>
+</footer>
+
+
+{% block additional_js %}{% endblock %}
+
+</body>
+</html>
