@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+code/starter_video_collector/.idea/.gitignore
+code/starter_video_collector/.idea/misc.xml
+code/starter_video_collector/.idea/modules.xml
+code/starter_video_collector/.idea/starter_video_collector.iml
+code/starter_video_collector/.idea/vcs.xml
+code/starter_video_collector/.idea/inspectionProfiles/profiles_settings.xml
+code/starter_video_collector/.idea/inspectionProfiles/Project_Default.xml
