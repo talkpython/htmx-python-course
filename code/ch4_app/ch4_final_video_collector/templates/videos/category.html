@@ -45,17 +45,11 @@
             <div class="col-md-4"></div>
             <div class="col-md-4">
 
-                <form class="video-form fade-me-in fade-me-out" action="/videos/add/{{ category.category }}" method="POST">
+                <a hx-get="/videos/add/{{ category.category }}"
+                   hx-swap="outerHTML swap:.25s"
+                   class="fade-me-out"
+                ><i class="fas fa-plus-circle"></i> add a video</a>
 
-                    <input type="text" class="form-control" name="id" placeholder="YouTube ID" required />
-                    <input type="text" class="form-control" name="title" placeholder="Video title" required />
-                    <input type="text" class="form-control" name="author" placeholder="Video author" required />
-                    <input type="number" class="form-control" name="view_count" placeholder="View count" required />
-
-                    <button class="btn btn-danger" type="submit">Create</button>
-
-                </form>
-                
             </div>
             <div class="col-md-4"></div>
         </div>
