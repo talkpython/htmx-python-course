@@ -1,9 +1,5 @@
-from typing import List, Optional
+from typing import Optional
 
-import flask
-import more_itertools
-
-from models.category_model import Category
 from models.video_model import Video
 from services import video_service
 from viewmodels.shared.viewmodelbase import ViewModelBase
