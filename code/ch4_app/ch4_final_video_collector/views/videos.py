@@ -30,5 +30,3 @@ def add_post(cat_name: str):
     # TODO: Add video here
 
     return flask.redirect(f'/videos/category/{cat_name}')
-
-
