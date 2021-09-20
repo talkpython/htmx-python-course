@@ -1,6 +1,5 @@
-from typing import List, Optional
+from typing import Optional
 
-import flask
 import more_itertools
 
 from models.category_model import Category
