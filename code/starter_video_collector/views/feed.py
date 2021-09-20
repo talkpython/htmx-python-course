@@ -1,5 +1,6 @@
-import flask
 import time
+
+import flask
 
 from infrastructure.view_modifiers import response
 from viewmodels.feed.feed_viewmodel import FeedViewModel
