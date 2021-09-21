@@ -5,6 +5,7 @@ from services import video_service
 from viewmodels.videos.add_video_viewmodel import AddViewViewModel
 from viewmodels.videos.category_viewmodel import CategoryViewModel
 from viewmodels.videos.play_viewmodel import PlayViewModel
+from viewmodels.videos.search_viewmodel import SearchViewModel
 
 blueprint = flask.Blueprint('videos', __name__, template_folder='templates')
 
@@ -44,4 +45,11 @@ def add_post(cat_name: str):
 @response(template_file='videos/partials/show_add_form.html')
 def cancel_add(cat_name: str):
     vm = AddViewViewModel(cat_name)
+    return vm.to_dict()
+
+
+@blueprint.get('/videos/search/<search_text>')
+@response(template_file='videos/search.html')
+def search(search_text: str):
+    vm = SearchViewModel(search_text)
     return vm.to_dict()
