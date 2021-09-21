@@ -53,6 +53,7 @@ def cancel_add(cat_name: str):
 def search():
     vm = SearchViewModel()
     if vm.is_htmx_request:
-        return flask.make_response(f"There are {len(vm.videos)} videos.")
+        html = flask.render_template('videos/partials/search_results.html', videos=vm.videos)
+        return flask.make_response(html)
 
     return vm.to_dict()
