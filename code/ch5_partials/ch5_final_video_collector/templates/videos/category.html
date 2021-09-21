@@ -45,10 +45,8 @@
             <div class="col-md-4"></div>
             <div class="col-md-4">
 
-                <a hx-get="/videos/add/{{ category.category }}"
-                   hx-swap="outerHTML swap:.25s"
-                   class="fade-me-out"
-                ><i class="fas fa-plus-circle"></i> add a video</a>
+                {{ render_partial('videos/partials/show_add_form.html',
+                                    cat_name=category.category) }}
 
             </div>
             <div class="col-md-4"></div>
