@@ -1,7 +1,19 @@
 {% extends "shared/_layout.html" %}
 {% block main_content %}
 
-    <h1>Search page</h1>
+    <div class="search-inputs">
+        <h1>Search video collector</h1>
+        <input
+                name="search_text"
+                placeholder="Search for a video ..."
+                class="form-control"
+                type="text">
+
+    </div>
+
+    <div class="videos search-results" id="search-results">
+        results
+    </div>
 
 {% endblock %}
 
