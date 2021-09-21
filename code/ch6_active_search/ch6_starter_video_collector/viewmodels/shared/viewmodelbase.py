@@ -12,7 +12,6 @@ class ViewModelBase:
         self.request_dict = request_dict.create('')
 
         self.error: Optional[str] = None
-        self.is_htmx_request = 'HX-Request' in flask.request.headers
         self.view_model = self.to_dict()
 
     def to_dict(self):
