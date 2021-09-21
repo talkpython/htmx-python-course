@@ -1,6 +1,7 @@
 import sys
 
 import flask
+import jinja_partials
 
 from services import video_service
 
@@ -22,6 +23,7 @@ def configure():
 
 
 def register_template_ops():
+    jinja_partials.register_extensions(app)
     helpers = {
         'len': len,
         'isinstance': isinstance,
