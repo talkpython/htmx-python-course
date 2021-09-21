@@ -1,0 +1,29 @@
+{% extends "shared/_layout.html" %}
+{% block main_content %}
+
+    <div class="search-inputs">
+        <h1>Search video collector</h1>
+        <input
+                name="search_text"
+                placeholder="Search for a video ..."
+                class="form-control"
+                type="text"
+                value="{{ search_text or '' }}"
+                hx-get="/videos/search"
+                hx-trigger="keyup changed delay:250ms"
+                hx-target="#search-results"
+                hx-push-url="true">
+
+    </div>
+
+    <div class="videos search-results" id="search-results">
+
+        {% if search_text %}
+            {{  render_partial('videos/partials/search_results.html', videos=videos) }}
+        {% endif %}
+
+    </div>
+
+{% endblock %}
+
+{% block title %}Search @ Video Collector{% endblock %}

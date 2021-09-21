@@ -1,0 +1,19 @@
+<div class="search-result-count">{{ len(videos) }} results</div>
+
+<div class="container">
+    {% for v in videos %}
+        <div class="row search-result-row">
+            <div class="col-md-2"></div>
+            <div class="video search-result col-md-3">
+                <a href="/videos/play/{{ v.id }}"
+                >{{ render_partial('shared/partials/_video_image.html', video=v) }}</a>
+            </div>
+            <div class="video search-result col-md-6">
+                <div><a href="/videos/play/{{ v.id }}" class="title">{{ v.title }}</a></div>
+                <div><span class="author">{{ v.author }}</span></div>
+                <div>{{ "{:,}".format(v.views) }} views</div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    {% endfor %}
+</div>
