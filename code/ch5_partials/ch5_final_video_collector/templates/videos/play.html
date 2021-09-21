@@ -1,0 +1,24 @@
+{% extends "shared/_layout.html" %}
+{% block main_content %}
+
+    <div class="video-player">
+        <iframe width="100%" height="700"
+                src="https://www.youtube.com/embed/{{ video.id }}?autoplay=1&modestbranding=1"
+                title="{{ video.title }}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
+                allowfullscreen></iframe>
+    </div>
+
+{% endblock %}
+
+{% block additional_css %}
+    <!--suppress CssUnusedSymbol -->
+    <style>
+        .main_content {
+            background: #444;
+        }
+    </style>
+{% endblock %}
+
+{% block title %}{{ video.title }} @ Video Collector{% endblock %}

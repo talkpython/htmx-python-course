@@ -1,0 +1,15 @@
+<form class="video-form fade-me-in fade-me-out" action="/videos/add/{{ cat_name }}" method="POST">
+
+    <input type="text" class="form-control" name="id" placeholder="YouTube ID" required/>
+    <input type="text" class="form-control" name="title" placeholder="Video title" required/>
+    <input type="text" class="form-control" name="author" placeholder="Video author" required/>
+    <input type="number" class="form-control" name="view_count" placeholder="View count" required/>
+
+    <button class="btn btn-success" type="submit">Create</button>
+
+    <button class="btn btn-danger"
+            hx-get="/videos/cancel_add/{{ cat_name }}"
+            hx-target=".video-form"
+    >Cancel</button>
+
+</form>
