@@ -48,8 +48,8 @@ def cancel_add(cat_name: str):
     return vm.to_dict()
 
 
-@blueprint.get('/videos/search/<search_text>')
+@blueprint.get('/videos/search')
 @response(template_file='videos/search.html')
-def search(search_text: str):
-    vm = SearchViewModel(search_text)
+def search():
+    vm = SearchViewModel()
     return vm.to_dict()
