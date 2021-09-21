@@ -8,6 +8,7 @@
                 placeholder="Search for a video ..."
                 class="form-control"
                 type="text"
+                value="{{ search_text or '' }}"
                 hx-get="/videos/search"
                 hx-trigger="keyup changed delay:250ms"
                 hx-target="#search-results"
@@ -17,6 +18,11 @@
     </div>
 
     <div class="videos search-results" id="search-results">
+
+        {% if search_text %}
+            {{  render_partial('videos/partials/search_results.html', videos=videos) }}
+        {% endif %}
+
     </div>
 
 {% endblock %}
