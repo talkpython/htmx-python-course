@@ -5,7 +5,10 @@
 
         <h1>Video Collector: Recent Videos</h1>
 
-        {{ render_partial('feed/partials/video_list.html', videos=videos) }}
+        {{ render_partial('feed/partials/video_list.html',
+                videos=videos,
+                page=1,
+                has_more_videos=has_more_videos) }}
 
     </div>
 

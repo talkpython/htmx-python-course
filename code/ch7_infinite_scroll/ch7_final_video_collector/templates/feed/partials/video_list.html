@@ -8,3 +8,12 @@
     </div>
 
 {% endfor %}
+
+{% if has_more_videos %}
+    <div class="scroll-trigger htmx-settling"
+         hx-get="/feed/more_videos/{{ (page+1) }}"
+         hx-trigger="revealed"
+         hx-swap="outerHTML">
+        <img src="/static/img/bars.svg" width="150px" class="htmx-indicator"/>
+    </div>
+{% endif %}

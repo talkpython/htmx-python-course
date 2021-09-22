@@ -17,3 +17,4 @@ class FeedViewModel(ViewModelBase):
         end = start + page_size
 
         self.videos: List[Video] = all_videos[start:end]
+        self.has_more_videos = len(all_videos) > end
