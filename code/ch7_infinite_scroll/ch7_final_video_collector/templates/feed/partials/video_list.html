@@ -1,0 +1,10 @@
+{% for v in videos %}
+
+    <div class="video">
+        <div><span class="title">{{ v.title }}</span></div>
+        <a href="/videos/play/{{ v.id }}">
+            {{ render_partial('shared/partials/_video_image.html', video=v) }}
+        </a>
+    </div>
+
+{% endfor %}
