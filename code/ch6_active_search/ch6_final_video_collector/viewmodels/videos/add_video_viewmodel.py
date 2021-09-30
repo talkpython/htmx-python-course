@@ -3,7 +3,7 @@ from typing import Optional
 from viewmodels.shared.viewmodelbase import ViewModelBase
 
 
-class AddViewViewModel(ViewModelBase):
+class AddVideoViewModel(ViewModelBase):
     def __init__(self, cat_name: str):
         super().__init__()
 

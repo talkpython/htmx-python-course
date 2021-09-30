@@ -2,7 +2,7 @@ import flask
 
 from infrastructure.view_modifiers import response
 from services import video_service
-from viewmodels.videos.add_video_viewmodel import AddViewViewModel
+from viewmodels.videos.add_video_viewmodel import AddVideoViewModel
 from viewmodels.videos.category_viewmodel import CategoryViewModel
 from viewmodels.videos.play_viewmodel import PlayViewModel
 
@@ -26,13 +26,13 @@ def play(video_id: str):
 @blueprint.get('/videos/add/<cat_name>')
 @response(template_file='videos/partials/add_video_form.html')
 def add_get(cat_name: str):
-    vm = AddViewViewModel(cat_name)
+    vm = AddVideoViewModel(cat_name)
     return vm.to_dict()
 
 
 @blueprint.post('/videos/add/<cat_name>')
 def add_post(cat_name: str):
-    vm = AddViewViewModel(cat_name)
+    vm = AddVideoViewModel(cat_name)
     vm.restore_from_form()
 
     video_service.add_video(cat_name, vm.id, vm.title, vm.author, vm.view_count)
@@ -43,5 +43,5 @@ def add_post(cat_name: str):
 @blueprint.get('/videos/cancel_add/<cat_name>')
 @response(template_file='videos/partials/show_add_form.html')
 def cancel_add(cat_name: str):
-    vm = AddViewViewModel(cat_name)
+    vm = AddVideoViewModel(cat_name)
     return vm.to_dict()
