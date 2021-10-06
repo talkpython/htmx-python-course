@@ -1,6 +1,6 @@
 # HTMX + Flask: Modern Python Web Apps, Hold the JavaScript
 
-<a href="course2x.jpg)](https://training.talkpython.fm/courses/htmx-flask-modern-python-web-apps-hold-the-javascript?utm_source=github" target="_blank"><img src="https://training.talkpython.fm/static/course_images/htmx-course2x.jpg" style="max-width: 800px; border-radius: 5px;" /></a>
+<a href="course2x.jpg)](https://training.talkpython.fm/courses/htmx-flask-modern-python-web-apps-hold-the-javascript?utm_source=github" target="_blank"><img src="https://training.talkpython.fm/static/course_images/htmx-course2x.jpg" style="max-width: 600px; border-radius: 5px;" /></a>
 
 ## Course Summary
 
