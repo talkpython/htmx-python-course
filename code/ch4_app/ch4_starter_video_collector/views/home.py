@@ -6,7 +6,7 @@ from viewmodels.home.index_viewmodel import IndexViewModel
 blueprint = flask.Blueprint('home', __name__, template_folder='templates')
 
 
-@blueprint.get('/')
+@blueprint.route('/')
 @response(template_file='home/index.html')
 def index():
     vm = IndexViewModel()

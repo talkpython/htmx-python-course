@@ -8,7 +8,7 @@ from viewmodels.feed.feed_viewmodel import FeedViewModel
 blueprint = flask.Blueprint('feed', __name__, template_folder='templates')
 
 
-@blueprint.get('/feed')
+@blueprint.route('/feed')
 @response(template_file='feed/index.html')
 def index():
     time.sleep(5)
