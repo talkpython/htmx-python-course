@@ -1,6 +1,6 @@
-flask
-Werkzeug
+flask~=0.12.3
+Werkzeug~=0.14.1
 pydantic
 more_itertools
 MarkupSafe
-Jinja2
+Jinja2==2.7
