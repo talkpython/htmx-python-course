@@ -127,17 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-code/starter_video_collector/.idea/.gitignore
-code/starter_video_collector/.idea/misc.xml
-code/starter_video_collector/.idea/modules.xml
-code/starter_video_collector/.idea/starter_video_collector.iml
-code/starter_video_collector/.idea/vcs.xml
-code/starter_video_collector/.idea/inspectionProfiles/profiles_settings.xml
-code/starter_video_collector/.idea/inspectionProfiles/Project_Default.xml
-code/ch4_app/ch4_final_video_collector/.idea/ch4_final_video_collector.iml
-code/ch4_app/ch4_final_video_collector/.idea/modules.xml
-code/ch4_app/ch4_final_video_collector/.idea/*
-code/starter_video_collector/.idea/*
-code/ch4_app/ch4_final_video_collector/.idea/*
-code/starter_video_collector/.idea/*
-code/ch7_infinite_scroll/ch7_final_video_collector/.idea
+
+# Pycharm project folder
+.idea/*
