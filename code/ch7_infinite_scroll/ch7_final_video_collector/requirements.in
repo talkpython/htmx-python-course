@@ -1,0 +1,7 @@
+flask
+Werkzeug
+pydantic
+more_itertools
+MarkupSafe
+Jinja2
+jinja-partials
