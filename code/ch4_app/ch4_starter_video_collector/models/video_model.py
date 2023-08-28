@@ -9,4 +9,4 @@ class Video(BaseModel):
     url: str
     author: str
     views: int
-    category: Optional[str]
+    category: Optional[str] = None
