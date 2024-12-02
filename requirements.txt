@@ -2,11 +2,11 @@
 #    uv pip compile requirements.piptools --output-file requirements.txt
 annotated-types==0.7.0
     # via pydantic
-blinker==1.8.2
+blinker==1.9.0
     # via flask
 click==8.1.7
     # via flask
-flask==3.0.3
+flask==3.1.0
     # via -r requirements.piptools
 itsdangerous==2.2.0
     # via flask
@@ -17,22 +17,22 @@ jinja2==3.1.4
     #   -r requirements.piptools
     #   flask
     #   jinja-partials
-markupsafe==2.1.5
+markupsafe==3.0.2
     # via
     #   -r requirements.piptools
     #   jinja2
     #   werkzeug
-more-itertools==10.3.0
+more-itertools==10.5.0
     # via -r requirements.piptools
-pydantic==2.8.0
+pydantic==2.10.2
     # via -r requirements.piptools
-pydantic-core==2.20.0
+pydantic-core==2.27.1
     # via pydantic
 typing-extensions==4.12.2
     # via
     #   pydantic
     #   pydantic-core
-werkzeug==3.0.3
+werkzeug==3.1.3
     # via
     #   -r requirements.piptools
     #   flask
