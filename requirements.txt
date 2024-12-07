@@ -24,7 +24,7 @@ markupsafe==3.0.2
     #   werkzeug
 more-itertools==10.5.0
     # via -r requirements.piptools
-pydantic==2.10.2
+pydantic==2.10.3
     # via -r requirements.piptools
 pydantic-core==2.27.1
     # via pydantic
