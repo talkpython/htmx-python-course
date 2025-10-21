@@ -4,3 +4,4 @@ pydantic
 more_itertools
 MarkupSafe
 Jinja2
+uvloop # Use only for production, comment out on Windows, consider winloop if needed.

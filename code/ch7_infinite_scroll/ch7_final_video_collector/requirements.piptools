@@ -5,3 +5,4 @@ more_itertools
 MarkupSafe
 Jinja2
 jinja-partials
+uvloop # Use only for production, comment out on Windows, consider winloop if needed.
